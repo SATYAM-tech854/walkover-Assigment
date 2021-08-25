@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <link rel="stylesheet" href="css/font/flaticon.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Industry(4.0)</title>
+</head>
+<body>
+
+  <i class="icon-menu burger-button" id="burger-menu"></i>
+
+  <nav class="nav-bar">
+    <ul class="nav-bar-options">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about_us">About us</a>
+      </li>
+      <li>
+        <a href="#our_products">Our products</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <h1>Let's</h1>
+        <p> Join Industry 4.0</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about_us">
+      <div class="about-container">
+        <h3 class="section-id">About us</h3>
+        <p class="content-about-subtitle">Welcome to our indusry 4.0</p>
+        <p class="content-about-description">An industry is a group of companies that are related based on their primary business activities. ... Individual companies are generally classified into an industry based on their largest sources of revenue..</p>
+      </div>
+    </section>
+
+    <div class="section-motto">
+      <p>Ready for better tomarrow</p>
+    </div>
+
+    <section class="products-section" id="our_products">
+      <div class="products-container">
+        <h3 class="section-id">Our Products</h3>
+        
+        <div class="products-items-container">
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/indurtrial5.jpg" alt="rolls tray">
+            </figure>
+            <div class="img-description">
+              <p>Iron industry</p>
+            </div>
+          </div>
+          
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/industrial3.jpg" alt="ham bread">
+            </figure>
+            <div class="img-description">
+              <p>Metal industry</p>
+            </div>
+          </div>
+        
+          <div class="img-item-container">
+            <figure class="img-container">
+              <img src="images/industrial4.jpg" alt="mini bread">
+            </figure>
+            <div class="img-description">
+              <p>Cast iron</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <a href="" role="button" class="products-button">
+            See more...
+          </a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-description">
+          <h3 class="section-id">Contact us</h3>
+          <p>Would you like to ask for something specific? Have any doubt? Leave us a message, we'll be glad to answer!</p>
+        </div>
+
+        <div class="contact-form">
+          <form action="" class="form-content">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name" id="name">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Email" id="email">
+            <label for="message">Enter your message</label>
+            <textarea placeholder="Message" style="height:100px" id="message"></textarea>
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>   
+        
+        <div class="contact-media">
+          <div class="social-media-icons">
+            <a href="">
+              <span class="flaticon-001-facebook"></span>
+            </a>
+            <a href="">
+              <span class="flaticon-011-instagram"></span>
+            </a>
+          </div>
+          <p>info@satyamd254@gmail.com / tel: 7354579632</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💕  by @satyam</p>
+  </footer>
+  
+  <script>
+    const mobile = window.matchMedia("screen and (max-width: 540px)");
+    const navBar = document.querySelector(".nav-bar"); 
+    const navigationItems = document.querySelectorAll(".nav-bar a");
+    const burgerButton = document.querySelector("#burger-menu");
+
+    mobile.addListener(validation)
+
+    function validation(event){
+      if (event.matches) {
+        burgerButton.addEventListener("click", showHide)
+        } else{          burgerButton.removeEventListener("click", showHide)
+        }
+      }
+    validation(mobile);
+
+    navigationItems.forEach(i => i.addEventListener('click', function() {
+    navBar.classList.remove("is-active");
+    }));
+
+    function showHide(){
+      navBar.classList.toggle("is-active");
+     }
+  </script>
+</body>
+</html>
